@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernanda Aprazy | Home Decor & Interior Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #c5a059;
@@ -13,8 +16,18 @@
             --gray: #f4f4f4;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--black); background: var(--white); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background: var(--white);
+        }
 
         /* Navigation */
         nav {
@@ -27,11 +40,34 @@
             width: 100%;
             z-index: 1000;
         }
-        .logo { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 2rem; }
-        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
+
+        .logo {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
 
         /* Slider / Hero */
         .slider {
@@ -39,6 +75,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .slide {
             position: absolute;
             width: 100%;
@@ -54,26 +91,59 @@
             text-align: center;
             color: var(--white);
         }
-        .slide.active { opacity: 1; }
+
+        .slide.active {
+            opacity: 1;
+        }
+
         .slide::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
-        .slide-content { position: relative; z-index: 2; }
-        .slide-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; }
-        
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
         /* Gallery */
-        .section-padding { padding: 80px 5%; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; position: relative; padding-bottom: 15px; }
+        .section-padding {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 60px; height: 3px; background: var(--gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
         }
 
         .gallery-grid {
@@ -81,53 +151,111 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .gallery-item {
             position: relative;
             overflow: hidden;
             cursor: pointer;
             height: 400px;
         }
+
         .gallery-item img {
-            width: 100%; height: 100%; object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .gallery-item:hover img { transform: scale(1.1); }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
         .overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(197, 160, 89, 0.8);
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.3s;
         }
-        .gallery-item:hover .overlay { opacity: 1; }
-        .overlay span { color: white; font-weight: bold; border: 1px solid white; padding: 10px 20px; }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay span {
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+            padding: 10px 20px;
+        }
 
         /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
             z-index: 2000;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center; align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
         }
-        .lightbox.active { display: flex; }
-        .lightbox img { max-width: 85%; max-height: 80vh; border: 3px solid var(--gold); }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 85%;
+            max-height: 80vh;
+            border: 3px solid var(--gold);
+        }
+
         .close-lightbox {
-            position: absolute; top: 20px; right: 30px;
-            color: var(--white); font-size: 40px; cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
         }
 
         /* Footer */
-        footer { background: var(--black); color: var(--white); padding: 40px 5%; text-align: center; }
-        .footer-logo { color: var(--gold); margin-bottom: 10px; font-size: 1.2rem; }
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
 
         @media (max-width: 768px) {
-            .slide-content h2 { font-size: 2rem; }
-            .nav-links { display: none; } /* Oculto para simplificação mobile */
+            .slide-content h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            /* Oculto para simplificação mobile */
         }
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -141,19 +269,22 @@
     </nav>
 
     <section class="slider" id="home">
-        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920')">
+        <div class="slide active"
+            style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920')">
             <div class="slide-content">
                 <h2>Sofisticação & Conforto</h2>
                 <p>Transformando ambientes em experiências únicas.</p>
             </div>
         </div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1616486341351-70252447c574?auto=format&fit=crop&q=80&w=1920')">
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1616486341351-70252447c574?auto=format&fit=crop&q=80&w=1920')">
             <div class="slide-content">
                 <h2>Design Atemporal</h2>
                 <p>Onde o luxo encontra a funcionalidade.</p>
             </div>
         </div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1616486341351-70252447c574?auto=format&fit=crop&q=80&w=1920')">
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1616486341351-70252447c574?auto=format&fit=crop&q=80&w=1920')">
             <div class="slide-content">
                 <h2>Design Atemporal</h2>
                 <p>Onde o luxo encontra a funcionalidade.</p>
@@ -162,11 +293,14 @@
 
     <section id="sobre" class="section-padding" style="background: var(--gray);">
         <div class="section-title">
+            <video autoplay="" muted="" loop="" width="30%" height="30%">
+                <source src="./video/_54185817.mp4" type="video/mp4">
+            </video>
             <h2>Sobre Fernanda Aprazy</h2>
-            <p style="max-width: 700px; margin: 20px auto;">Especialista em criar espaços que refletem a personalidade dos moradores, unindo a estética clássica do Home Decor com tendências modernas de arquitetura de interiores.</p>
-      <video autoplay="" muted="" loop="" width="30%" height="30%">
-                    <source src="./video/_54185817.mp4" type="video/mp4">
-                </video>
+            <p style="max-width: 700px; margin: 20px auto;">Especialista em criar espaços que refletem a personalidade
+                dos moradores, unindo a estética clássica do Home Decor com tendências modernas de arquitetura de
+                interiores.</p>
+
         </div>
     </section>
 
@@ -176,85 +310,98 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&q=80&w=800" alt="Projeto 1">
+                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 1">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Projeto 2">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 2">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Projeto 3">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 3">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1617806118233-18e1db208fa0?auto=format&fit=crop&q=80&w=800" alt="Projeto 4">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1db208fa0?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 4">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
             <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&q=80&w=800" alt="Projeto 1">
-                <div class="overlay"><span>VER PROJETO</span></div>
-            </div>
-            <br><br>
-            
-        </div> <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Projeto 2">
-                <div class="overlay"><span>VER PROJETO</span></div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&q=80&w=800"
+                        alt="Projeto 1">
+                    <div class="overlay"><span>VER PROJETO</span></div>
+                </div>
+                <br><br>
+
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Projeto 3">
-                <div class="overlay"><span>VER PROJETO</span></div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1617806118233-18e1db208fa0?auto=format&fit=crop&q=80&w=800" alt="Projeto 4">
-                <div class="overlay"><span>VER PROJETO</span></div>
-            </div> <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Projeto 2">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 2">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Projeto 3">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 3">
                 <div class="overlay"><span>VER PROJETO</span></div>
             </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1db208fa0?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 4">
+                <div class="overlay"><span>VER PROJETO</span></div>
             </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 2">
+                <div class="overlay"><span>VER PROJETO</span></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800"
+                    alt="Projeto 3">
+                <div class="overlay"><span>VER PROJETO</span></div>
+            </div>
+        </div>
     </section>
-<left>
-           
+    <left>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Ampliada">
-    </div>
 
-    <footer>
-        <div class="footer-logo">FERNANDA APRAZY</div>
-        <p>Home Decor & Designer de Interiores</p>
-        <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">&copy; 2026 Todos os direitos reservados.</p>
-    </footer>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="Ampliada">
+        </div>
 
-    <script>
-        // Slider Logic
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-        setInterval(nextSlide, 5000);
+        <footer>
+            <div class="footer-logo">FERNANDA APRAZY</div>
+            <p>Home Decor & Designer de Interiores</p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">&copy; 2026 Todos os direitos reservados.</p>
+        </footer>
 
-        // Lightbox Logic
-        function openLightbox(element) {
-            const imgSrc = element.querySelector('img').src;
-            document.getElementById('lightbox-img').src = imgSrc;
-            document.getElementById('lightbox').classList.add('active');
-        }
+        <script>
+            // Slider Logic
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-        }
-    </script>
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            setInterval(nextSlide, 5000);
+
+            // Lightbox Logic
+            function openLightbox(element) {
+                const imgSrc = element.querySelector('img').src;
+                document.getElementById('lightbox-img').src = imgSrc;
+                document.getElementById('lightbox').classList.add('active');
+            }
+
+            function closeLightbox() {
+                document.getElementById('lightbox').classList.remove('active');
+            }
+        </script>
 </body>
+
 </html>
